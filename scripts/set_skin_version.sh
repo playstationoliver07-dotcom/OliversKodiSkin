@@ -22,12 +22,12 @@ if [[ ! -f "$ADDON_XML" ]]; then
 fi
 
 CURRENT_VERSION="$(
-  perl -ne 'if (/<addon\b[^>]*\bid="skin\.bingie"[^>]*\bversion="([^"]+)"/) { print "$1\n"; exit }' "$ADDON_XML"
+  grep -m1 '<addon id="skin.bingie"' "$ADDON_XML" | sed -E 's/.*version="([^"]+)".*/\1/'
 )"
 if [[ -z "$CURRENT_VERSION" ]]; then
   echo "Could not read current version from $ADDON_XML" >&2
   exit 1
 fi
 
-perl -0777 -i '' -pe "s@(<addon\\b[^>]*\\bid=\"skin\\.bingie\"[^>]*\\bversion=\")[^\"]+(\"[^>]*>)@\\1$NEW_VERSION\\2@" "$ADDON_XML"
+sed -i '' -E '/<addon id="skin\.bingie"/ s/version="[^"]+"/version="'"$NEW_VERSION"'"/' "$ADDON_XML"
 echo "Updated skin.bingie version: $CURRENT_VERSION -> $NEW_VERSION"
