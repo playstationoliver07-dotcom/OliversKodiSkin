@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<addons>
+<addon id="repository.oliverskodiskin" name="Oliver Kodi Skin Repository" provider-name="playstationoliver07-dotcom" version="1.0.0">
+  <extension point="xbmc.addon.repository" name="Oliver Kodi Skin Repository">
+    <requires>
+      <import addon="xbmc.addon" version="12.0.0"/>
+    </requires>
+    <dir minversion="20.9.1">
+      <info compressed="false">https://raw.githubusercontent.com/playstationoliver07-dotcom/OliversKodiSkin/main/omega/addons.xml</info>
+      <checksum>https://raw.githubusercontent.com/playstationoliver07-dotcom/OliversKodiSkin/main/omega/addons.xml.md5</checksum>
+      <datadir zip="true">https://raw.githubusercontent.com/playstationoliver07-dotcom/OliversKodiSkin/main/omega/</datadir>
+    </dir>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en_GB">Oliver Kodi Skin Repository</summary>
+    <description lang="en_GB">Repository for Oliver's Bingie skin builds.</description>
+    <platform>all</platform>
+    <assets>
+      <icon>icon.png</icon>
+      <fanart>fanart.jpg</fanart>
+    </assets>
+  </extension>
+</addon>
+
+<!-- BINGIE -->
+<addon id="skin.bingie" version="2.0.3" name="Bingie" provider-name="matke">
+	<requires>
+		<import version="5.17.0" addon="xbmc.gui"/>
+		<import addon="script.bingie.helper" version="1.1.2"/>
+		<import addon="script.bingie.toolbox" version="1.0.0"/>
+		<import addon="script.bingie.widgets" version="1.0.1"/>
+		<import addon="script.skinshortcuts" version="2.0.3"/>
+		<import addon="resource.images.studios.coloured" version="1.0.0" />
+		<import addon="plugin.video.tmdb.bingie.helper" version="1.0.1" />
+		<import addon="plugin.program.autocompletion" version="2.1.3" />
+	</requires>
+	<extension debugging="false" defaultthemename="Textures.xbt" effectslowdown="1" point="xbmc.gui.skin">
+        <res aspect="16:9" default="true" folder="1080i" height="1080" width="1920" />
+    </extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en_GB">Kodi skin with Netflix layout.</summary>
+		<summary lang="zh_CN">Netflix 布局 Kodi 皮肤。</summary>
+		<summary lang="es_ES">Kodi con diseño Netflix.</summary>
+		<summary lang="es_AR">Kodi con diseño Netflix.</summary>
+		<summary lang="es_MX">Kodi con diseño Netflix.</summary>
+		<description lang="en_GB">Bingie – The home of your favorite movies and shows!</description>
+		<description lang="zh_CN">Bingie -你最喜欢的电影和节目的主界面！</description>
+		<description lang="es_ES">Bingie - tu hogar de películas y series favoritas!</description>
+		<description lang="es_AR">Bingie - tu hogar de películas y series favoritas!</description>
+		<description lang="es_MX">Bingie - tu hogar de películas y series favoritas!</description>
+		<platform>all</platform>
+		<license>GPL v2.0</license>
+		<forum></forum>
+		<source></source>
+		<assets>
+			<icon>resources/icon.png</icon>
+			<fanart>resources/fanart.jpg</fanart>			
+		</assets>
+	</extension>
+</addon>
+</addons>

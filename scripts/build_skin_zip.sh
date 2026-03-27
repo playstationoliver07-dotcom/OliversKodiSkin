@@ -12,7 +12,7 @@ if [[ ! -f "$ADDON_XML" ]]; then
 fi
 
 VERSION="$(
-  perl -ne 'if (/<addon\b[^>]*\bid="skin\.bingie"[^>]*\bversion="([^"]+)"/) { print "$1\n"; exit }' "$ADDON_XML"
+  grep -m1 '<addon id="skin.bingie"' "$ADDON_XML" | sed -E 's/.*version="([^"]+)".*/\1/'
 )"
 if [[ -z "$VERSION" ]]; then
   echo "Could not read version from $ADDON_XML" >&2

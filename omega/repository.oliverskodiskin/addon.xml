@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="repository.oliverskodiskin" name="Oliver Kodi Skin Repository" provider-name="playstationoliver07-dotcom" version="1.0.0">
+  <extension point="xbmc.addon.repository" name="Oliver Kodi Skin Repository">
+    <requires>
+      <import addon="xbmc.addon" version="12.0.0"/>
+    </requires>
+    <dir minversion="20.9.1">
+      <info compressed="false">https://raw.githubusercontent.com/playstationoliver07-dotcom/OliversKodiSkin/main/omega/addons.xml</info>
+      <checksum>https://raw.githubusercontent.com/playstationoliver07-dotcom/OliversKodiSkin/main/omega/addons.xml.md5</checksum>
+      <datadir zip="true">https://raw.githubusercontent.com/playstationoliver07-dotcom/OliversKodiSkin/main/omega/</datadir>
+    </dir>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en_GB">Oliver Kodi Skin Repository</summary>
+    <description lang="en_GB">Repository for Oliver's Bingie skin builds.</description>
+    <platform>all</platform>
+    <assets>
+      <icon>icon.png</icon>
+      <fanart>fanart.jpg</fanart>
+    </assets>
+  </extension>
+</addon>
